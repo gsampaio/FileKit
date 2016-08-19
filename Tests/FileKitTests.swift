@@ -362,7 +362,7 @@ class FileKitTests: XCTestCase {
             XCTAssertEqual(pathFromURL, path)
 
             let subPath = pathFromURL + "test"
-            XCTAssertEqual(Path(url: url.URLByAppendingPathComponent("test")), subPath)
+            XCTAssertEqual(Path(url: url.URLByAppendingPathComponent("test")!), subPath)
         } else {
             XCTFail("Not able to create Path from URL")
         }
